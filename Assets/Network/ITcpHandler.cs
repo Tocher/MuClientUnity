@@ -1,5 +1,7 @@
-﻿using System;
-public interface ITcpHandler
+﻿namespace Assets.Network
 {
-    Packet GetPacket(byte[] tcpPacket);
+    public interface ITcpHandler
+    {
+        Packet GetPacket(byte[] tcpPacket);
+    }
 }

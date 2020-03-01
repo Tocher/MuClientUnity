@@ -1,26 +1,25 @@
-﻿using System;
-public class Packet
+﻿namespace Assets.Network
 {
-    public byte Type { get; set; }
-
-    public int Length { get; set; }
-
-    public byte Code { get; set; }
-
-    public byte SubCode { get; set; }
-
-    public byte[] Data { get; set; }
-
-    public bool IsCompleted
+    public class Packet
     {
-        get
+        public byte Type { get; set; }
+
+        public int Length { get; set; }
+
+        public byte[] LengthBytes { get; set; }
+
+        public byte Code { get; set; }
+
+        public byte SubCode { get; set; }
+
+        public byte[] Data { get; set; }
+
+        public bool IsCompleted
         {
-            return Data.Length == Length;
+            get
+            {
+                return (Data.Length + 3 + LengthBytes.Length) == Length;
+            }
         }
-    }
-
-    public Packet()
-    {
-
     }
 }

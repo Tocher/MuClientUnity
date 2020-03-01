@@ -1,8 +1,10 @@
-﻿using System;
-public static class EncryptUtils
+﻿namespace Assets.Utils
 {
-    public static byte[] Decrypt(byte[] encryptedBytes)
+    public static class EncryptUtils
     {
-        return new byte[2];
+        public static byte[] Decrypt(byte[] encryptedBytes)
+        {
+            return new byte[2];
+        }
     }
 }

@@ -1,7 +1,9 @@
-﻿using System;
-public class Message
+﻿namespace Assets.Handlers
 {
-    public Message()
+    public class Message
     {
+        public Message()
+        {
+        }
     }
 }
